@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-"""Flask web application"""
+#!usr/bin/python3
+"""Flask web application, display text and variable values"""
 
 from flask import Flask
 app = Flask(__name__)
@@ -13,6 +13,11 @@ def hello_hbnb():
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     return "HBNB"
+
+
+@app.route('/c/<text>', strict_slashes=False)
+def c_text(text):
+    return "C " + text.replace('_', ' ')
 
 
 if __name__ == "__main__":
