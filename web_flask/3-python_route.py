@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Flask web application, display text and variable values"""
 
 from flask import Flask
